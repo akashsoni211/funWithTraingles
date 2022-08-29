@@ -49,7 +49,7 @@ a{
     padding: .3rem;
 }
 
-#submit{
+.submit{
     padding: .5rem;
     margin: auto;
     display: block;
@@ -60,16 +60,48 @@ a{
     cursor: pointer;
 }
 
-#submit:active{
+.submit:active{
     background-color: whitesmoke;
     color: black;
 }
 .outputMessage{
     margin-top: 2rem;
     text-align: center;
+    margin-bottom: 2rem;
+    font-size: large;
+    font-weight: bold;
 }
 
 .outputMessage label{
     font-weight: bold;
     font-size: large;
+}
+
+.quiz-main{
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+}
+
+.quiz-question{
+    font-size: large;
+    font-weight: bold;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.messagequiztop{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 8rem;
+}
+
+#result{
+    background-color: black;
+    color: whitesmoke;
+    padding: .5rem 2rem;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    border: .1rem solid black;
 }
