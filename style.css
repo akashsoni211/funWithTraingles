@@ -1,0 +1,75 @@
+*{
+    font-family: 'Aboreto', cursive;
+    margin: 0%;
+    padding: 0%;
+}
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+.nav{
+    max-width: 100%;
+    background-color: #334155;
+    height: 10vh;
+    color: whitesmoke;  
+}
+
+.heading{
+    padding: .2rem;
+}
+.list-items{
+    display: inline-block;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+.list-active{
+    font-weight: bold;
+}
+
+.menu{
+    position: absolute;
+    top: 2.5rem;
+    right: 0%;
+}
+
+.main{
+    padding: 2rem;
+    text-align: center;
+    width: 400px;
+    margin: auto;
+    margin-top: 6rem;
+    box-shadow: 1px 1px 5px 1px;
+}
+
+.main input{
+    font-size: large;
+    margin: .5rem 0rem;
+    border-radius: 1rem;
+    padding: .3rem;
+}
+
+#submit{
+    padding: .5rem;
+    margin: auto;
+    display: block;
+    margin-top: 1rem;
+    background-color: black;
+    color: whitesmoke;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+#submit:active{
+    background-color: whitesmoke;
+    color: black;
+}
+.outputMessage{
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.outputMessage label{
+    font-weight: bold;
+    font-size: large;
+}
