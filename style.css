@@ -105,3 +105,18 @@ a{
     margin-left: 1rem;
     border: .1rem solid black;
 }
+
+.hypotenuseMain{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.hypotenuseMain h2{
+    margin: 1rem 0rem;
+}
+
+.hypotenuseMain input{
+    margin: 1rem 0rem;
+    font-size: large;
+}

@@ -2,7 +2,7 @@
 var angleone = document.querySelector("#angleOne");
 var angleTwo = document.querySelector("#angleTwo");
 var angleThree = document.querySelector("#angleThree");
-var outputMessage = document.querySelector("#messageOut")
+var outputMessage = document.querySelector("#messageOut");
 var btnChecktriangle = document.querySelector("#submit");
 //index app var ends
 
@@ -12,6 +12,16 @@ var array = new Array(10);
 var btncheckquiz = document.querySelector("#submitquiz"); 
 var rightAnswer = ["90","right angled","one right angle","12, 16, 20","Equilateral triangle","100","30","a+b+c","no", "45"];
 //quiz app var ends here
+
+//hypo starts
+
+var hypoOutMessage = document.querySelector("#messageOutHypo");
+var base = document.querySelector("#base");
+var height = document.querySelector("#height");
+var btnHypotenuseCheck = document.querySelector("#hyposubmit");
+
+//hypo ends
+
 
 //index app function
 function isItTriangle(){
@@ -42,7 +52,6 @@ function btnCheckTriangleHandler(){
         outputMessage.innerHTML = "All three Values Are Required"
     }
 }
-console.log(btnChecktriangle);
 if(btnChecktriangle !== null){
     btnChecktriangle.addEventListener("click", btnCheckTriangleHandler);
 }
@@ -79,10 +88,50 @@ function checkQuizAnswer(){
     quizOutMessage.innerHTML = score;
 }
 
-console.log(btncheckquiz);
+
 if(btncheckquiz !== null){
     btncheckquiz.addEventListener("click", checkQuizAnswer);
 }
-
-
 //quiz App functions end
+
+
+//Hypotenuse App starts
+
+function checkHypoAnswer(){
+    var hypo;
+    if(+base.value !== "" && +height.value !== ""){
+        hypo = +base.value * +base.value + +height.value * +height.value
+        hypo = Math.sqrt(hypo)
+    }
+    else{
+        hypo = "Values are required";
+    }
+    hypoOutMessage.innerHTML = parseFloat(hypo).toFixed(2);   
+}
+
+if(btnHypotenuseCheck !== null){
+    btnHypotenuseCheck.addEventListener("click", checkHypoAnswer);
+}
+//Hypotenuse App end
+
+// area app start
+
+var messageOutarea = document.querySelector("#messageOutarea");
+var sideOne = document.querySelector("#sideOne");
+var sideTwo = document.querySelector("#sideTwo");
+var sideThree = document.querySelector("#sideThree");
+var areasubmit = document.querySelector("#areasubmit");
+
+function checkAreaHandler(){
+    var s = (+sideOne.value + +sideTwo.value + +sideThree.value)/2;
+    var area = s*(s - +sideOne.value)*(s - +sideTwo.value)*(s - +sideThree.value); 
+    area = Math.sqrt(area);
+    messageOutarea.innerHTML = parseFloat(area).toFixed(2);
+}
+
+if(areasubmit !== null){
+    areasubmit.addEventListener("click", checkAreaHandler)
+}
+
+
+//area app end 
